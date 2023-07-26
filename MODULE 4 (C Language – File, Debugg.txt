@@ -1,0 +1,67 @@
+                                    MODULE: 4 (C Language – File, Debugging &Error Handling)
+                                                                                
+
+Que 1: Write a program to read data from file.
+
+Ans:
+     #include<stdio.h>
+main()
+{
+	char name[50];
+	FILE*fptr;
+	fptr=fopen("filehanfling.txt","r");
+	if(fptr==0)
+	{
+		printf("This file is invalid");
+		
+	}
+	printf("Enter your name:");
+	scanf("%s",&name);
+	fprintf(fptr,"%s",name);
+	
+	fclose(fptr);
+	
+}
+
+
+Que2: Write a program to read and write data from the file. 
+
+Ans: 
+      #include<stdio.h>
+main()
+{
+	int age[50];
+	FILE*fptr;
+	fptr=fopen("filehandling.txt","r");
+	if(fptr==0)
+	{
+		printf("This file is invalid");
+		
+	}
+	printf("Enter your age:");
+	scanf("%d",&age);
+	fprintf(fptr,"%d",age);
+	
+	fclose(fptr);
+	
+}
+
+ #include<stdio.h>
+main()
+{
+	char name[70];
+	FILE*fptr;
+	fptr=fopen("Assignment.txt","w");
+	if(fptr==0)
+	{
+		printf("This file is invalid");
+		
+	}
+	printf("Enter your name:");
+	scanf("%s",&name);
+	fprintf(fptr,"%s",name);
+	
+	fclose(fptr);
+	
+}
+     
